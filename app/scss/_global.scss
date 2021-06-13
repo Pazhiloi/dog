@@ -3,6 +3,9 @@ body{
   height: 100%;
 }
 body{
+  @extend %roboto-400;
+  font-size: 16px;
+  line-height: 1.5;
   display: flex;
   flex-direction: column;
   color: $default;
@@ -15,14 +18,30 @@ img{
   object-fit: cover;
 }
 .container{
-  max-width: 1270px;
+  max-width: 1170px;
   margin: 0 auto;
   padding: 0 15px;
 }
 
 .title{
-  font-size: 30px;
-  line-height: 30px;
+  @extend %roboto-500;
+  font-size: 32px;
+  line-height: 1.4;
   color: $title;
+}
+a{
+  color: $default;
+}
+.button{
+  @extend %btn;
+  transition: all 0.5s ease;
+}
+.button:hover{
+  color: #fff;
+  background-color: $accent;
+}
+
+.text{
+  opacity: 0.6;
 }
 
